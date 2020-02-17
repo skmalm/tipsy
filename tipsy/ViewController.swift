@@ -16,5 +16,8 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func touchTwentyPercent(_ sender: UIButton) {
+        sender.isSelected = true
+    }
 }
 
