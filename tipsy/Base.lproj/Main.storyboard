@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Calculator View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tipsy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CalculatorViewController" customModule="tipsy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,11 +28,11 @@
                                         <color key="textColor" red="0.66659480329999998" green="0.6667092443" blue="0.66657876969999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ex. 125.67" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XEf-wA-i5Q" userLabel="Text Field">
-                                        <rect key="frame" x="109.5" y="74" width="135" height="48"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ex. 125.67" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XEf-wA-i5Q" userLabel="Text Field">
+                                        <rect key="frame" x="0.0" y="74" width="354" height="48"/>
                                         <color key="textColor" red="0.043841540810000003" green="0.69045096640000003" blue="0.41999024150000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select tip" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2T-sm-XfH">
                                         <rect key="frame" x="0.0" y="148" width="354" height="48"/>
@@ -46,20 +46,29 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ADN-o1-H7H">
                                                 <rect key="frame" x="0.0" y="0.0" width="43" height="48"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="tintColor" red="0.043841540810000003" green="0.69045096640000003" blue="0.41999024150000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="0%">
                                                     <color key="titleColor" red="0.043841540810000003" green="0.69045096640000003" blue="0.41999024150000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tipButtonWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cy6-Up-hlf"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYx-DE-81u">
                                                 <rect key="frame" x="89" y="0.0" width="57" height="48"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="tintColor" red="0.043841540810000003" green="0.69045096640000003" blue="0.41999024150000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="10%">
                                                     <color key="titleColor" red="0.043841540810000003" green="0.69045096640000003" blue="0.41999024150000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tipButtonWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DXX-Va-hTy"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eS4-Dy-uhe">
                                                 <rect key="frame" x="192" y="0.0" width="60" height="48"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="tintColor" red="0.043841540810000003" green="0.69045096640000003" blue="0.41999024150000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="20%">
                                                     <color key="titleColor" red="0.043841540810000003" green="0.69045096640000003" blue="0.41999024150000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -67,7 +76,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="touchTwentyPercent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="anD-j4-HVm"/>
+                                                    <action selector="tipButtonWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="anD-j4-HVm"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -87,14 +96,18 @@
                                                 <color key="textColor" red="0.043841540810000003" green="0.69045096640000003" blue="0.41999024150000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="eKX-Ui-8XB" userLabel="Split Stepper">
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" wraps="YES" value="2" minimumValue="1" maximumValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="eKX-Ui-8XB" userLabel="Split Stepper">
                                                 <rect key="frame" x="57.5" y="8" width="94" height="32"/>
+                                                <connections>
+                                                    <action selector="stepperValueWasChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="9Ff-KW-PpK"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="pbT-NR-5ji" firstAttribute="width" secondItem="jb9-nQ-gLd" secondAttribute="width" id="3ga-7I-l7F"/>
+                                    <constraint firstItem="XEf-wA-i5Q" firstAttribute="width" secondItem="jb9-nQ-gLd" secondAttribute="width" id="dYy-zR-dnd"/>
                                     <constraint firstItem="pYH-wT-soV" firstAttribute="width" secondItem="jb9-nQ-gLd" secondAttribute="width" id="tfg-Az-AQ0"/>
                                     <constraint firstItem="w2T-sm-XfH" firstAttribute="width" secondItem="jb9-nQ-gLd" secondAttribute="width" id="zTb-ub-2nI"/>
                                 </constraints>
@@ -124,6 +137,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="splitLabel" destination="6vS-Zq-Y18" id="TQW-Ta-OGJ"/>
+                        <outlet property="stepper" destination="eKX-Ui-8XB" id="Bmp-vi-rwF"/>
+                        <outlet property="textField" destination="XEf-wA-i5Q" id="TMm-fz-fNu"/>
+                        <outletCollection property="tipButtons" destination="ADN-o1-H7H" collectionClass="NSMutableArray" id="gQP-Eo-Veb"/>
+                        <outletCollection property="tipButtons" destination="AYx-DE-81u" collectionClass="NSMutableArray" id="hc4-4w-UDy"/>
+                        <outletCollection property="tipButtons" destination="eS4-Dy-uhe" collectionClass="NSMutableArray" id="Da2-2y-h0r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
