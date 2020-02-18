@@ -151,6 +151,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="calculateButton" destination="YHi-CK-M8R" id="Dy6-Q4-eiu"/>
                         <outlet property="splitLabel" destination="6vS-Zq-Y18" id="TQW-Ta-OGJ"/>
                         <outlet property="stepper" destination="eKX-Ui-8XB" id="Bmp-vi-rwF"/>
                         <outlet property="textField" destination="XEf-wA-i5Q" id="TMm-fz-fNu"/>
@@ -246,6 +247,7 @@ with a ??% tip.</string>
                         <viewLayoutGuide key="safeArea" id="24h-Jh-3mg"/>
                     </view>
                     <connections>
+                        <outlet property="recalculateButton" destination="9hx-e1-Jho" id="cJ7-q5-E9u"/>
                         <outlet property="summaryLabel" destination="DSB-6s-Luu" id="Lxg-ER-giy"/>
                         <outlet property="totalPerPersonLabel" destination="Uuf-6b-o6L" id="xfY-gT-W6b"/>
                     </connections>

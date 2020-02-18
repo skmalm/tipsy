@@ -74,6 +74,11 @@ class CalculatorViewController: UIViewController {
     @IBOutlet var tipButtons: [UIButton]!
     @IBOutlet weak private var splitLabel: UILabel!
     @IBOutlet weak private var stepper: UIStepper!
+    @IBOutlet weak var calculateButton: UIButton! {
+        didSet {
+            calculateButton.layer.cornerRadius = Constants.buttonCornerRadius
+        }
+    }
     
 }
 
@@ -86,7 +91,8 @@ extension CalculatorViewController: UITextFieldDelegate {
 
 
 extension CalculatorViewController {
-    private struct Constants {
+    struct Constants {
+        static let buttonCornerRadius: CGFloat = 15.0
         static let defaultStepperValue: Double = 2.0
     }
 }

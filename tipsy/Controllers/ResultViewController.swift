@@ -29,6 +29,11 @@ class ResultViewController: UIViewController {
             }
         }
     }
+    @IBOutlet weak var recalculateButton: UIButton! {
+        didSet {
+            recalculateButton.layer.cornerRadius = CalculatorViewController.Constants.buttonCornerRadius
+        }
+    }
 }
 
 extension Double {
