@@ -9,5 +9,11 @@
 import Foundation
 
 struct TipCalculator {
+    let billTotal: Double
+    let tipPercentage: Double
+    let splitQuantity: Int
     
+    var totalPerPerson: Double {
+        return ((1 + tipPercentage) * billTotal) / Double(splitQuantity)
+    }
 }
