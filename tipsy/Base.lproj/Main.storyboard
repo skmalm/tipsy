@@ -25,7 +25,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter bill total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbT-NR-5ji">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <color key="textColor" red="0.66659480329999998" green="0.6667092443" blue="0.66657876969999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.58442866800000004" green="0.60396122929999996" blue="0.59975218770000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ex. 125.67" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XEf-wA-i5Q" userLabel="Text Field">
@@ -37,7 +37,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select tip" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2T-sm-XfH">
                                         <rect key="frame" x="0.0" y="148" width="354" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <color key="textColor" red="0.66659480329999998" green="0.6667092443" blue="0.66657876969999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.58442866800000004" green="0.60396122929999996" blue="0.59975218770000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="8qH-K4-nLw" userLabel="Tip Button Stack">
@@ -84,7 +84,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Split" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYH-wT-soV">
                                         <rect key="frame" x="0.0" y="296" width="354" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <color key="textColor" red="0.66659480329999998" green="0.6667092443" blue="0.66657876969999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.58442866800000004" green="0.60396122929999996" blue="0.59975218770000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Szs-Jz-Nzf" userLabel="Split Stack">
@@ -120,6 +120,9 @@
                                 <state key="normal" title="Calculate">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="5Fq-zI-WfO" kind="presentation" id="Ept-aI-TrH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.84428709749999997" green="0.97657281159999998" blue="0.92313140630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -149,6 +152,89 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="Q7L-Aw-viN">
+            <objects>
+                <viewController id="5Fq-zI-WfO" customClass="ResultViewController" customModule="tipsy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KkG-jR-oAF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eBu-Hh-9OX" userLabel="Top Section">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="283"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="QHg-l2-DKx" userLabel="Result Stack">
+                                        <rect key="frame" x="121" y="83.5" width="172" height="116"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total per person" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgQ-Sq-pr9">
+                                                <rect key="frame" x="0.0" y="0.0" width="172" height="48"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="textColor" red="0.58442866800000004" green="0.60396122929999996" blue="0.59975218770000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="34.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uuf-6b-o6L" userLabel="Result Value Label">
+                                                <rect key="frame" x="28" y="68" width="116" height="48"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                                <color key="textColor" red="0.043841540810000003" green="0.69045096640000003" blue="0.41999024150000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.86040145160000003" green="0.98036700489999995" blue="0.92984229330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="QHg-l2-DKx" firstAttribute="centerX" secondItem="eBu-Hh-9OX" secondAttribute="centerX" id="OaL-RC-w1i"/>
+                                    <constraint firstItem="QHg-l2-DKx" firstAttribute="centerY" secondItem="eBu-Hh-9OX" secondAttribute="centerY" id="h2q-1T-csJ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GQe-o4-zWd" userLabel="Bottom Section">
+                                <rect key="frame" x="0.0" y="283" width="414" height="525"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hx-e1-Jho">
+                                        <rect key="frame" x="112" y="461" width="190" height="56"/>
+                                        <color key="backgroundColor" red="0.043841540810000003" green="0.69045096640000003" blue="0.41999024150000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <inset key="contentEdgeInsets" minX="20" minY="10" maxX="20" maxY="10"/>
+                                        <state key="normal" title="Recalculate">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSB-6s-Luu">
+                                        <rect key="frame" x="80.5" y="8" width="253" height="60"/>
+                                        <string key="text">Split between 2 people,
+with a 20% tip.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" red="0.58442866800000004" green="0.60396122929999996" blue="0.59975218770000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="DSB-6s-Luu" firstAttribute="top" secondItem="GQe-o4-zWd" secondAttribute="top" constant="8" id="6v1-Q7-gxw"/>
+                                    <constraint firstItem="9hx-e1-Jho" firstAttribute="centerX" secondItem="GQe-o4-zWd" secondAttribute="centerX" id="Syd-wp-UNf"/>
+                                    <constraint firstAttribute="bottom" secondItem="9hx-e1-Jho" secondAttribute="bottom" constant="8" id="Vbm-nO-2ZZ"/>
+                                    <constraint firstItem="DSB-6s-Luu" firstAttribute="centerX" secondItem="GQe-o4-zWd" secondAttribute="centerX" id="t8K-rB-X08"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="eBu-Hh-9OX" firstAttribute="top" secondItem="KkG-jR-oAF" secondAttribute="top" id="2CT-fW-Okd"/>
+                            <constraint firstItem="24h-Jh-3mg" firstAttribute="trailing" secondItem="GQe-o4-zWd" secondAttribute="trailing" id="Blv-02-g2Q"/>
+                            <constraint firstItem="GQe-o4-zWd" firstAttribute="leading" secondItem="24h-Jh-3mg" secondAttribute="leading" id="MZw-1j-7lV"/>
+                            <constraint firstItem="GQe-o4-zWd" firstAttribute="height" secondItem="24h-Jh-3mg" secondAttribute="height" multiplier="0.65" id="OGP-6g-G3v"/>
+                            <constraint firstItem="eBu-Hh-9OX" firstAttribute="leading" secondItem="KkG-jR-oAF" secondAttribute="leading" id="Snk-0h-Jft"/>
+                            <constraint firstAttribute="trailing" secondItem="eBu-Hh-9OX" secondAttribute="trailing" id="cN9-uD-5Bp"/>
+                            <constraint firstItem="24h-Jh-3mg" firstAttribute="bottom" secondItem="GQe-o4-zWd" secondAttribute="bottom" id="m57-qu-eVE"/>
+                            <constraint firstItem="GQe-o4-zWd" firstAttribute="top" secondItem="eBu-Hh-9OX" secondAttribute="bottom" id="wWL-FI-uI5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="24h-Jh-3mg"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ErI-92-ySz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="973.91304347826099" y="138.61607142857142"/>
         </scene>
     </scenes>
 </document>
