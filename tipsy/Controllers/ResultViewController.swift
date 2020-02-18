@@ -11,5 +11,8 @@ import UIKit
 class ResultViewController: UIViewController {
 
     
-
+    @IBAction func recalculateButtonTapped(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
+    
 }

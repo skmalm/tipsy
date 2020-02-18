@@ -10,6 +10,8 @@ import UIKit
 
 class CalculatorViewController: UIViewController {
 
+    //TODO: Fix calculator autolayout to put items into green and white views
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         stepper.value = Constants.defaultStepperValue
