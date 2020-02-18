@@ -19,6 +19,37 @@ class CalculatorViewController: UIViewController {
         addTapRecognizer()
     }
 
+    func calculator() -> TipCalculator {
+        var billTotalString = textField.text ?? "$0.00"
+        if billTotalString == "" { billTotalString = "0.00" }
+        // remove dollar sign from string before casting to double
+        billTotalString.removeFirst()
+        let billTotal = Double(billTotalString) ?? 0.0
+        var tip = 0.0
+        for tipButton in tipButtons {
+            if tipButton.isSelected {
+                if tipButton.currentTitle! == "10%" {
+                    tip = 0.1
+                } else if tipButton.currentTitle! == "20%" {
+                    tip = 0.2
+                }
+            }
+        }
+        let split = Int(splitLabel.text!)!
+        return TipCalculator(billTotal: billTotal, tipPercentage: tip, splitQuantity: split)
+    }
+    
+    @IBAction func calculateButtonWasTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "Show Result", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        assert(segue.identifier == "Show Result", "Segue identifier error")
+        if let resultViewController = segue.destination as? ResultViewController {
+            resultViewController.calculator = calculator()
+        }
+    }
+    
     private func addTapRecognizer() {
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(viewWasTapped))
         view.addGestureRecognizer(tapRecognizer)

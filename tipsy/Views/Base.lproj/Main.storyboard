@@ -121,7 +121,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="5Fq-zI-WfO" kind="presentation" id="Ept-aI-TrH"/>
+                                    <action selector="calculateButtonWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oia-Xc-m2p"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -147,11 +147,12 @@
                         <outletCollection property="tipButtons" destination="ADN-o1-H7H" collectionClass="NSMutableArray" id="gQP-Eo-Veb"/>
                         <outletCollection property="tipButtons" destination="AYx-DE-81u" collectionClass="NSMutableArray" id="hc4-4w-UDy"/>
                         <outletCollection property="tipButtons" destination="eS4-Dy-uhe" collectionClass="NSMutableArray" id="Da2-2y-h0r"/>
+                        <segue destination="5Fq-zI-WfO" kind="presentation" identifier="Show Result" id="qR5-Gk-BqU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+            <point key="canvasLocation" x="29" y="139"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="Q7L-Aw-viN">
@@ -173,8 +174,8 @@
                                                 <color key="textColor" red="0.58442866800000004" green="0.60396122929999996" blue="0.59975218770000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="34.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uuf-6b-o6L" userLabel="Result Value Label">
-                                                <rect key="frame" x="28" y="68" width="116" height="48"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="??.??" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uuf-6b-o6L" userLabel="Result Value Label">
+                                                <rect key="frame" x="37" y="68" width="98.5" height="48"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                                 <color key="textColor" red="0.043841540810000003" green="0.69045096640000003" blue="0.41999024150000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -204,15 +205,15 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSB-6s-Luu">
-                                        <rect key="frame" x="80.5" y="8" width="253" height="60"/>
-                                        <string key="text">Split between 2 people,
-with a 20% tip.</string>
+                                        <rect key="frame" x="81.5" y="8" width="251" height="60"/>
+                                        <string key="text">Split between ? people,
+with a ??% tip.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="textColor" red="0.58442866800000004" green="0.60396122929999996" blue="0.59975218770000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="DSB-6s-Luu" firstAttribute="top" secondItem="GQe-o4-zWd" secondAttribute="top" constant="8" id="6v1-Q7-gxw"/>
                                     <constraint firstItem="9hx-e1-Jho" firstAttribute="centerX" secondItem="GQe-o4-zWd" secondAttribute="centerX" id="Syd-wp-UNf"/>
@@ -221,7 +222,7 @@ with a 20% tip.</string>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="eBu-Hh-9OX" firstAttribute="top" secondItem="KkG-jR-oAF" secondAttribute="top" id="2CT-fW-Okd"/>
                             <constraint firstItem="24h-Jh-3mg" firstAttribute="trailing" secondItem="GQe-o4-zWd" secondAttribute="trailing" id="Blv-02-g2Q"/>
@@ -234,6 +235,10 @@ with a 20% tip.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="24h-Jh-3mg"/>
                     </view>
+                    <connections>
+                        <outlet property="summaryLabel" destination="DSB-6s-Luu" id="Lxg-ER-giy"/>
+                        <outlet property="totalPerPersonLabel" destination="Uuf-6b-o6L" id="xfY-gT-W6b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ErI-92-ySz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

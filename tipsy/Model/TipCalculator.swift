@@ -17,3 +17,11 @@ struct TipCalculator {
         return ((1 + tipPercentage) * billTotal) / Double(splitQuantity)
     }
 }
+
+extension TipCalculator: CustomStringConvertible {
+    var description: String {
+        return "bill: \(billTotal), tip: \(tipPercentage), split: \(splitQuantity), totalPerPerson: \(totalPerPerson)"
+    }
+    
+    
+}
